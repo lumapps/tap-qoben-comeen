@@ -50,7 +50,7 @@ class CouponsStream(ComeenQobenStream):
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
         th.Property("name", th.StringType),
-        th.Property("percentOff", th.IntegerType),
+        th.Property("percentOff", th.DecimalType),
         th.Property("productIds", th.ArrayType(th.StringType)),
         th.Property("status", th.StringType),
         th.Property("createdAt", th.DateTimeType),
@@ -124,7 +124,7 @@ class DiscountsStream(ComeenQobenStream):
         th.Property("name", th.StringType),
         th.Property("appliedOn", th.StringType),
         th.Property("occurrences", th.IntegerType),
-        th.Property("percentOff", th.IntegerType),
+        th.Property("percentOff", th.DecimalType),
         th.Property("startAt", th.DateTimeType),
         th.Property("createdAt", th.DateTimeType),
         th.Property("updatedAt", th.DateTimeType),
